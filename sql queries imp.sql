@@ -8,6 +8,7 @@ select count(*) from employee;
 
 select first(emp_id)from employee;
 select last(emp_id)from employee;
+
 select age from employee order by rand() ;
 
 select emp_id,first_name from employee where emp_id>=2 and emp_id <6;
@@ -87,6 +88,9 @@ employee as e where productid=1 and first_name="sofia";
 
 select employee.first_name from employee as e;
 select e.first_name , e.last_name from employee as e  where first_name="sofia";
+select e.first_name , e.last_name,p.price from employee as e, products as p;
+select first_name,concat(age  ," ",adress) as empdetails from employee ;
+select p.productid, p.supplierid from products as p;
 
 create table products (
 productid int  not null,
